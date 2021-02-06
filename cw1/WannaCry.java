@@ -42,7 +42,6 @@ public class WannaCry {
             writeBytesToFile(encryptedAesKey, AES_KEY_FILE_NAME);
 
         } catch (Exception e) {
-            System.out.println("Failed for some reason :( " + e.getMessage());
             e.printStackTrace();
         }
 
