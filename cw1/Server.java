@@ -13,8 +13,7 @@ public class Server {
         if (args.length < 1) {
             printToConsole("Usage: java Server port");
         }
-        int port = /* Integer.parseInt(args[0]) */6660;
-        //  were assuming that we can always connect to whatever port the user has specifeid
+        int port = Integer.parseInt(args[0]);
         ServerSocket socketServer = new ServerSocket(port);
         printToConsole("Socket Server started on port " + port);
         printToConsole("\nWaiting for incoming connections...\n");
