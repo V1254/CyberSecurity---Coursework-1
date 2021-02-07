@@ -35,6 +35,7 @@ public class Client {
             if (choice.equalsIgnoreCase("n") || choice.equalsIgnoreCase("no")) {
                 printToConsole("Terminating Connection");
                 scanner.close();
+                socket.close();
                 break;
             } else if (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes")) {
                 printToConsole("Type your message below and press enter/return when done");
@@ -48,9 +49,6 @@ public class Client {
                 printToConsole("Finished Sending message to the server\n");
             }
         }
-
-        socket.close();
-
     }
 
     private static BigInteger getUserSignature(String userId, BigInteger x) {
