@@ -59,6 +59,7 @@ public class Server {
         try {
             ObjectInputStream publicKeyStream = new ObjectInputStream(new FileInputStream(userId + ".pub"));
             RSAPublicKey userPublicKey = (RSAPublicKey) publicKeyStream.readObject();
+            publicKeyStream.close();
 
             BigInteger n = userPublicKey.getModulus();
             BigInteger e = userPublicKey.getPublicExponent();
@@ -67,7 +68,6 @@ public class Server {
             BigInteger z = hashString(message);
 
             result = x.equals(z);
-            publicKeyStream.close();
         } catch (Exception e) {
         }
 
