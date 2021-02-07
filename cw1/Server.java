@@ -18,7 +18,7 @@ public class Server {
         try {
             port = Integer.parseInt(args[0]);
         } catch (Exception e) {
-            printToConsole("Failed connecting to server\nUsage: java Server port(number)");
+            printToConsole("Failed parsing port\nUsage: java Server port(number)");
             System.exit(-1);
         }
 
