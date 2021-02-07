@@ -10,10 +10,18 @@ import java.security.interfaces.RSAPublicKey;
 public class Server {
 
     public static void main(String[] args) throws Exception {
-        if (args.length < 1) {
+        if (args.length != 1) {
             printToConsole("Usage: java Server port");
+            System.exit(-1);
         }
-        int port = Integer.parseInt(args[0]);
+        int port = 0;
+        try {
+            port = Integer.parseInt(args[0]);
+        } catch (Exception e) {
+            printToConsole("Failed connecting to server\nUsage: java Server port(number)");
+            System.exit(-1);
+        }
+
         ServerSocket socketServer = new ServerSocket(port);
         printToConsole("Socket Server started on port " + port);
         printToConsole("\nWaiting for incoming connections...\n");
