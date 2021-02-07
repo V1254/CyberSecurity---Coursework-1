@@ -40,7 +40,7 @@ public class Client {
             } else if (choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes")) {
                 printToConsole("Type your message below and press enter/return when done");
                 String message = scanner.nextLine();
-                BigInteger x = hashString(message);
+                BigInteger x = getHashedBigInt(message);
                 BigInteger y = getUserSignature(userId, x);
 
                 outputStream.writeObject(userId);
@@ -71,7 +71,7 @@ public class Client {
         return y;
     }
 
-    private static BigInteger hashString(String stringToComputeFrom) throws Exception {
+    private static BigInteger getHashedBigInt(String stringToComputeFrom) throws Exception {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] hashedString = digest.digest(stringToComputeFrom.getBytes(StandardCharsets.UTF_8));
         return new BigInteger(1, hashedString); // 1 ensures that it's positive

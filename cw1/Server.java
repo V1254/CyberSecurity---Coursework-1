@@ -65,7 +65,7 @@ public class Server {
             BigInteger e = userPublicKey.getPublicExponent();
 
             BigInteger x = y.modPow(e, n);
-            BigInteger z = hashString(message);
+            BigInteger z = getHashedBigInt(message);
 
             result = x.equals(z);
         } catch (Exception e) {
@@ -74,7 +74,7 @@ public class Server {
         return result;
     }
 
-    private static BigInteger hashString(String stringToComputeFrom) throws Exception {
+    private static BigInteger getHashedBigInt(String stringToComputeFrom) throws Exception {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] hashedString = digest.digest(stringToComputeFrom.getBytes(StandardCharsets.UTF_8));
         return new BigInteger(1, hashedString); // 1 ensures that it's positive
