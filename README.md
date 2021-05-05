@@ -70,12 +70,12 @@ For some reason, you lot decided not to use the Java signature API, but rather i
   
 *   An example of the server output may look like this (you do not have to follow the format exactly):
 ```    
-    * alice: This is an open letter to Melvin. You stand for everything I hated during that time. I'm making this as painful as I can for you.
-    * alice: YnBwa286Ly92dnYubnRzc2NwLmxqaC9uL3Z3Z2dvcG50dHBhdHBvL2xqaGh0aXBvL2c2amhueS93aV9qa3RpX2d0cHB0bl9wal9odGd1Y2lfbHdrY3B3Z19saWFsX2Fqamh0bm9fd2lz
-    * bob: I almost cried reading this. 
-    * carol: IM ALL IN TOMORROW. This is personal. The same children they robbed 13 years ago grew up and we have money now ourselves
-    * carol: Hold the line!
-    * melvin: \[signature not verified\]
-    * WSBChairman: The line was held.
+    alice: This is an open letter to Melvin. You stand for everything I hated during that time. I'm making this as painful as I can for you.
+    alice: YnBwa286Ly92dnYubnRzc2NwLmxqaC9uL3Z3Z2dvcG50dHBhdHBvL2xqaGh0aXBvL2c2amhueS93aV9qa3RpX2d0cHB0bl9wal9odGd1Y2lfbHdrY3B3Z19saWFsX2Fqamh0bm9fd2lz
+    bob: I almost cried reading this. 
+    carol: IM ALL IN TOMORROW. This is personal. The same children they robbed 13 years ago grew up and we have money now ourselves
+    carol: Hold the line!
+    melvin: \[signature not verified\]
+    WSBChairman: The line was held.
 ```
 
