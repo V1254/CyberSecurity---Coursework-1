@@ -69,12 +69,13 @@ For some reason, you lot decided not to use the Java signature API, but rather i
 *   Upon connecting a new client, the server receives the userid, the message and a BigInteger y from the client. It then reads the user's public key, extract the modulus n and public exponent e. It computes another BigInteger x = y^e mod n. Separately, it also computes the message digest of the received message, and interpret the resulting byte array as a BigInteger z. If x and z are equal, the signature is considered to be verified; it should print the userid and the message to the screen. If it is not verified, or if the userid is unrecognised (no corresponding key of that userid is present in the server), it should print the userid followed by a simple message stating that fact. Your server should continue to work (receive other clients) after this failed signature; in other words it should not just crash or terminate.
   
 *   An example of the server output may look like this (you do not have to follow the format exactly):
-    
-    alice: This is an open letter to Melvin. You stand for everything I hated during that time. I'm making this as painful as I can for you.
-    alice: YnBwa286Ly92dnYubnRzc2NwLmxqaC9uL3Z3Z2dvcG50dHBhdHBvL2xqaGh0aXBvL2c2amhueS93aV9qa3RpX2d0cHB0bl9wal9odGd1Y2lfbHdrY3B3Z19saWFsX2Fqamh0bm9fd2lz
-    bob: I almost cried reading this. 
-    carol: IM ALL IN TOMORROW. This is personal. The same children they robbed 13 years ago grew up and we have money now ourselves
-    carol: Hold the line!
-    melvin: \[signature not verified\]
-    WSBChairman: The line was held.
+```    
+    * alice: This is an open letter to Melvin. You stand for everything I hated during that time. I'm making this as painful as I can for you.
+    * alice: YnBwa286Ly92dnYubnRzc2NwLmxqaC9uL3Z3Z2dvcG50dHBhdHBvL2xqaGh0aXBvL2c2amhueS93aV9qa3RpX2d0cHB0bl9wal9odGd1Y2lfbHdrY3B3Z19saWFsX2Fqamh0bm9fd2lz
+    * bob: I almost cried reading this. 
+    * carol: IM ALL IN TOMORROW. This is personal. The same children they robbed 13 years ago grew up and we have money now ourselves
+    * carol: Hold the line!
+    * melvin: \[signature not verified\]
+    * WSBChairman: The line was held.
+```
 
